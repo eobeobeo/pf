@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>미쟝센</title>
+
+	<!-- 구글 웹폰트(fonts.google.com) -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="./css/default.css">
+</head>
+<body>
+<script>
+
+</script>
+
+<!-- s: 스킵 -->
+<div id="skip_navigation">
+<a href="#contents">본문 바로가기</a>
+</div>
+<!-- e: 스킵 -->
+
+<header id="header">
+	<div class="header_inner">
+		<h1 class="logo">
+			<a href="#"><img src="./images/logo.gif" alt="미쟝센 로고"></a>
+		</h1>
+
+		<nav>
+			<ul class="gnb">
+				<li><a href="#">BRAND</a></li>
+				<li><a href="#">PRODUCT</a></li>
+				<li><a href="#">HOMME</a></li>
+				<li><a href="#">M INSIDE</a></li>
+				<li><a href="#">NEWS &amp; EVENT</a></li>
+			</ul>
+		</nav>
+
+		<nav>
+			<ul class="top_gnb">
+				<li><a href="#"><img src="./images/login_icon.gif" alt="로그인"></a></li>
+				<li><a href="#"><img src="./images/search_icon.gif" alt="검색"></a></li> 
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<!-- s: 비주얼 -->
+<div id="visual">
+	<div class="visual_inner typo">
+		<a href="#" class="typo1">
+			<p class="t1_1">미쟝센 라이킷헤어</p>
+			<p class="t1_2">출첵 미션</p>
+		</a>
+
+		<div class="typo2">
+			<p>매일 출석체크하고!</p>
+			<p>다양한 Likeit HAIR 스타일도 확인하세요!</p>
+		</div>
+	</div>
+</div>
+<!-- e: 비주얼 -->
+
+<!-- s: 컨텐츠 -->
+<div id="contents">
+	<ul class="img_1">
+		<li>
+			<a href="#">
+				<img src="./images/selfwedding.jpg" alt="hair note 사랑스러운 셀프웨딩 헤어스타일링">
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="./images/straight.jpg" alt="hair note 고데기 없이 연출하는 스트레이트 헤어">
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="./images/online_store.jpg" alt="online store">
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="./images/news_notice.jpg" alt="미쟝센 news & notice">
+			</a>
+		</li>
+	</ul>
+
+	<ul class="img_2">
+		<li>
+			<a href="#">
+				<img src="./images/neck_hair.jpg" alt="hair note 넥라인을 살려주는 묶음헤어 스타일링">
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="./images/change_your_hair.jpg" alt="체인지유어헤어 지금 바로 신청하세요">
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<img src="./images/man_hair.jpg" alt="매일 색다른 남자 헤어스타일">
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- e: 컨텐츠 -->
+
+<!-- s: 푸터 -->
+<footer id="footer">
+	<div class="footer_inner">
+		<p class="copyright_1">
+			<span>(주)아모레퍼시픽 대표이사 : 심상배</span>
+			<span>서울시 중구 청계천로 100</span>
+			<span>사업자등록번호: 106-86-43373</span>
+		</p>
+
+		<p class="copyright_2">&copy; AMOREPACIFIC. ALL RIGHTS RESERVED.</p>
+	</div>
+</footer>
+<!-- e: 푸터 -->
+
+<script>
+	const aTag = document.getElementsByTagName("a");
+
+	for(let i=0; i<aTag.length; i++){
+		aTag[i].addEventListener("click", function(event){
+			event.preventDefault(); // 브라우저 기본동작 차단
+		});
+	}
+</script>
+</body>
+</html>

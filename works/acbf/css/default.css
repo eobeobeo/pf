@@ -1,0 +1,444 @@
+@charset "utf-8";
+
+
+
+/* reset(초기화) */
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+div,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+button,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+input,
+button {
+    font-size: 12px;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+img,
+fieldset,
+iframe {
+    border: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+
+
+/* base(기본설정) */
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+    color: #000;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* blind(블라인드), skip(스킵) */
+.blind,
+.skip_navigation a {
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+.skip_navigation a {
+	z-index: 100;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.skip_navigation a:focus {
+    width: 100%;
+    height: auto;
+	margin: 0;
+	padding: 10px;
+    overflow: visible;
+    clip-path: initial;
+}
+
+
+
+/* layout(레이아웃) */
+/* header(헤더) */
+header {
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    height: 47px;
+    background-color: rgba(255, 255, 255, 0.97);
+}
+
+header .inner {
+    position: relative;
+    width: 1280px;
+    height: 47px;
+    margin: 0 auto;
+}
+
+/* visual(비주얼) */
+#visual {
+    padding-top: 47px;
+    width: 100%;
+}
+
+#visual img {
+    width: 100%;
+    min-width: 1280px;
+	image-rendering: -webkit-optimize-contrast;
+}
+
+/* contents(컨텐츠) */
+/* category(카테고리) */
+#main_category {
+    width: 1280px;
+    padding-top: 120px;
+    padding-bottom: 140px;
+    margin: 0 auto;
+}
+
+/* celeb(연예인 착용) */
+#celeb {
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 140px;
+    background: #f5f4f0;
+}
+
+#celeb .inner {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#celeb .celeb_contents {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* footer(푸터) */
+footer {
+    width: 100%;
+    background: #222;
+}
+footer .inner {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/* 주요 CSS */
+/* header(헤더) */
+h1 {
+    position: absolute;
+    left: 0px;
+    top: calc((47px - 30px) / 2);
+}
+
+.menu {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: calc((47px - 17px) / 3);
+    width: 700px;
+    font-size: 17px;
+    transform: translate(-50%);
+}
+
+.menu > li > a {
+    padding: 12px 24px;
+}
+
+.category a:hover,
+.category a:focus {
+    background: rgba(0, 0, 0, 1);
+    color: #fff;
+}
+
+.gnb_icon {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 0px;
+    top: calc((47px - 17px) / 3);
+}
+
+.gnb_icon a {
+    transition: 0.1s;
+}
+
+.gnb_icon a:hover
+.gnb_icon a:focus {
+    opacity: 0.3;
+}
+
+.sub {
+    display: none;
+    height: 300px;
+}
+
+.sub li {
+    position: relative;
+    top: 20px;
+    padding: 0 10px;
+    font-size: 15px;
+    line-height: 3em;
+    text-align:center; 
+}
+
+.sub li a {
+    font-weight: 100;
+    color: #fff;
+}
+
+.sub li a:hover,
+.sub li a:focus {
+	background-color:initial;
+	text-decoration: underline;
+}
+
+.bg_box {
+    z-index: -10;
+    display: none;
+    position: absolute;
+    left: -100%;
+    top: 47px;
+    width: 300%;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.gnb_icon li a {
+    margin-left: 17px;
+    margin-right: 0px;
+}
+
+/* contents(컨텐츠) */
+/* category(카테고리) */
+#main_category h2 {
+    padding-bottom: 70px;
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+#main_category ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#main_category li {
+	
+    background: #000;
+}
+
+#main_category img {
+    transition: 0.5s;
+}
+
+#main_category a {
+	display: block;
+    position: relative;
+	width:300px;
+	height:450px;
+	overflow: hidden;
+}
+
+#main_category a:hover img,
+#main_category a:focus img {
+	transform: scale(1.05);
+    opacity: 0.6;
+}
+
+#main_category span {
+	position: absolute;
+	left: 50%;
+	top: 49%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	line-height: 26px;
+}
+
+#main_category strong {
+	font-size: 28px;
+	font-weight: 500;
+}
+
+/* celeb(연예인 착용) */
+#celeb h2 {
+    padding-bottom: 70px;
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.celeb_contents p {
+    margin-top: 38px;
+    font-size: 16px;
+    font-weight: 700;
+	text-align: center;
+}
+
+.celeb_contents p a {
+	line-height: 90px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.celeb_contents ul {
+	text-align: center;
+}
+
+.celeb_contents li:hover,
+.celeb_contents li:focus {
+	cursor: pointer;
+}
+
+.celeb_contents li {
+	display: inline-block;
+    width: 380px;
+    height: 634px;
+    background: #fff;
+}
+
+.celeb_contents a:first-child {
+	display: block;
+	width: 380px;
+	height: 479px;
+    overflow: hidden;
+}
+
+.celeb_contents img {
+    transition: 0.3s;
+}
+
+.celeb_contents img:hover,
+.celeb_contents a:first-child:focus img {
+    transform: scale(1.05);
+}
+
+.celeb_contents a {
+    transition: 0.1s;
+}
+
+.celeb_contents a:hover,
+.celeb_contents a:focus {
+    text-decoration: underline;
+}
+
+/* footer(푸터) */
+h3 {
+    font-size: 15px;
+}
+
+#sitemap {
+    width: 1280px;
+    padding-top: 85px;
+    font-size: 14px;
+}
+
+#sitemap:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#sitemap a:hover,
+#sitemap a:focus {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#sitemap div {
+    float: left;
+    margin-right: 180px;
+    padding-bottom: 120px;
+}
+
+#sitemap h3,
+#sitemap li,
+#sitemap a {
+    color: #ccc;
+}
+
+#sitemap h3,
+#sitemap li {
+    margin-bottom: 12px;
+}
+
+#info {
+	padding-bottom: 85px;
+    opacity: 0.66;
+    text-align: center;
+}
+
+#info p,
+.sns_icon img {
+    margin-bottom: 24px;
+}
+
+#info ul {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0 auto;
+}
+
+#info img {
+    display: inline;
+    color: #b4b4b4;
+}
+#info p {
+    color: #fff;
+}
