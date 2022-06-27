@@ -304,7 +304,11 @@ header {
     float: left;
     width: 440px;
     height: 345px;
-    background: #3eaa15;
+    background-image: url("../img/flower.jpg");
+    background-repeat: no-repeat;
+    background-position: center -140px;
+    background-size: cover;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .profile_info {
