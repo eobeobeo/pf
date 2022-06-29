@@ -519,7 +519,8 @@ header {
 /* portfolio media */
 @media screen and (max-width: 1279px) {
     #portfolio {
-        height: auto;
+        height: fit-content;
+        padding-bottom: 0;
     }
 
     #portfolio .inner {
@@ -535,11 +536,12 @@ header {
     }
 
     /* short */
-    #portfolio .inner .short {
+    #portfolio .short {
+        position: initial;
         margin-bottom: 100px;
     }
 
-    #portfolio .inner .short .info {
+    #portfolio .short .info {
         margin-left: 20px;
     }
 
@@ -558,7 +560,7 @@ header {
 }
 
 @media screen and (max-width: 429px) {
-    #portfolio .inner .short {
+    #portfolio .short {
         margin-bottom: initial;
     }
 }
