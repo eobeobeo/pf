@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-
-
 /* reset(초기화) */
 html,
 body {
@@ -39,7 +37,7 @@ h3,
 h4,
 input,
 button {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 ul,
@@ -62,9 +60,6 @@ table {
     border-collapse: collapse;
 }
 
-
-
-
 /* base(기본설정) */
 body {
     font-family: "Noto Sans KR", sans-serif;
@@ -80,33 +75,31 @@ a {
 /* blind(블라인드), skip(스킵) */
 .blind,
 .skip_navigation a {
-	position: absolute;
+    overflow: hidden;
+    position: absolute;
     left: 0px;
     top: 0px;
     width: 1px;
     height: 1px;
     margin: -1px;
-    overflow: hidden;
     clip-path: inset(50%);
 }
 
 .skip_navigation a {
-	z-index: 100;
+    z-index: 100;
     background-color: black;
     color: white;
     text-align: center;
 }
 
 .skip_navigation a:focus {
+    overflow: visible;
     width: 100%;
     height: auto;
-	margin: 0;
-	padding: 10px;
-    overflow: visible;
+    margin: 0;
+    padding: 10px;
     clip-path: initial;
 }
-
-
 
 /* layout(레이아웃) */
 /* header(헤더) */
@@ -134,7 +127,7 @@ header .inner {
 #visual img {
     width: 100%;
     min-width: 1280px;
-	image-rendering: -webkit-optimize-contrast;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 /* contents(컨텐츠) */
@@ -214,8 +207,7 @@ h1 {
     transition: 0.1s;
 }
 
-.gnb_icon a:hover
-.gnb_icon a:focus {
+.gnb_icon a:hover .gnb_icon a:focus {
     opacity: 0.3;
 }
 
@@ -230,7 +222,7 @@ h1 {
     padding: 0 10px;
     font-size: 15px;
     line-height: 3em;
-    text-align:center; 
+    text-align: center;
 }
 
 .sub li a {
@@ -240,8 +232,8 @@ h1 {
 
 .sub li a:hover,
 .sub li a:focus {
-	background-color:initial;
-	text-decoration: underline;
+    background-color: initial;
+    text-decoration: underline;
 }
 
 .bg_box {
@@ -261,22 +253,20 @@ h1 {
 }
 
 /* contents(컨텐츠) */
-/* category(카테고리) */
-#main_category h2 {
+h2 {
     padding-bottom: 70px;
     color: #333;
     font-size: 18px;
     text-align: center;
     letter-spacing: 2px;
 }
-
+/* category(카테고리) */
 #main_category ul {
     display: flex;
     justify-content: space-between;
 }
 
 #main_category li {
-	
     background: #000;
 }
 
@@ -285,78 +275,70 @@ h1 {
 }
 
 #main_category a {
-	display: block;
+    display: block;
+    overflow: hidden;
     position: relative;
-	width:300px;
-	height:450px;
-	overflow: hidden;
+    width: 300px;
+    height: 450px;
 }
 
 #main_category a:hover img,
 #main_category a:focus img {
-	transform: scale(1.05);
+    transform: scale(1.05);
     opacity: 0.6;
 }
 
 #main_category span {
-	position: absolute;
-	left: 50%;
-	top: 49%;
-	transform: translate(-50%, -50%);
-	color: #fff;
-	font-size: 14px;
-	text-align: center;
-	line-height: 26px;
+    position: absolute;
+    left: 50%;
+    top: 49%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 26px;
 }
 
 #main_category strong {
-	font-size: 28px;
-	font-weight: 500;
+    font-size: 28px;
+    font-weight: 500;
 }
 
 /* celeb(연예인 착용) */
-#celeb h2 {
-    padding-bottom: 70px;
-    color: #333;
-    font-size: 18px;
-    text-align: center;
-    letter-spacing: 2px;
-}
-
 .celeb_contents p {
     margin-top: 38px;
     font-size: 16px;
     font-weight: 700;
-	text-align: center;
+    text-align: center;
 }
 
 .celeb_contents p a {
-	line-height: 90px;
+    line-height: 90px;
     font-size: 14px;
     font-weight: 400;
 }
 
 .celeb_contents ul {
-	text-align: center;
+    text-align: center;
 }
 
-.celeb_contents li:hover,
-.celeb_contents li:focus {
-	cursor: pointer;
+.celeb_contents article:hover,
+.celeb_contents article:focus {
+    cursor: pointer;
 }
 
-.celeb_contents li {
-	display: inline-block;
+.celeb_contents article {
+    display: inline-block;
     width: 380px;
     height: 634px;
     background: #fff;
 }
 
 .celeb_contents a:first-child {
-	display: block;
-	width: 380px;
-	height: 479px;
+    display: block;
     overflow: hidden;
+    width: 380px;
+    height: 479px;
 }
 
 .celeb_contents img {
@@ -368,13 +350,57 @@ h1 {
     transform: scale(1.05);
 }
 
-.celeb_contents a {
-    transition: 0.1s;
-}
-
 .celeb_contents a:hover,
 .celeb_contents a:focus {
     text-decoration: underline;
+}
+
+/* 신제품 */
+#products {
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+
+#products .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#products article {
+    margin-bottom: 90px;
+}
+
+#products article .info {
+    padding-top: 30px;
+    line-height: 30px;
+}
+
+#products article div del {
+    color: #767676;
+    font-size: 13px;
+}
+
+#products article strong {
+    color: #333;
+    font-weight: 500;
+}
+
+#products article .img {
+    overflow: hidden;
+    width: 300px;
+    height: 450px;
+}
+
+#products article img {
+    transition: 0.3s;
+}
+
+#products article a:hover img,
+#products article a:focus img {
+    transform: scale(1.05);
 }
 
 /* footer(푸터) */
@@ -418,7 +444,7 @@ h3 {
 }
 
 #info {
-	padding-bottom: 85px;
+    padding-bottom: 85px;
     opacity: 0.66;
     text-align: center;
 }
