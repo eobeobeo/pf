@@ -482,7 +482,7 @@ input {
     position: relative;
 }
 
-.news_grid p {
+.news_grid .news_title {
     position: absolute;
     left: 20px;
     bottom: 20px;
