@@ -196,6 +196,12 @@ a.gnb_title:focus {
     margin-top: 1px;
 }
 
+input {
+    display: none;
+    position: relative;
+    top: -3px;
+}
+
 .bg_box {
     display: none;
     position: absolute;
@@ -313,7 +319,7 @@ a.gnb_title:focus {
 /* top_btn */
 .top_btn {
     z-index: 100;
-    display: table;
+    display: none;
     position: fixed;
     right: 5%;
     bottom: 100px;

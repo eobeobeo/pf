@@ -62,8 +62,11 @@
                     </ul>
 
                     <ul class="gnb_icon">
-                        <li>
-                            <a href="#"><img src="./img/search_w.png" alt="검색"></a>
+                        <li class="search" tabindex="0">
+							<form>
+								<input type="search">
+								<img src="./img/search_w.png" alt="검색">
+							</form>
                         </li>
 
                         <li>
@@ -480,40 +483,75 @@
 		}
 		
 		// top_btn
-		document.querySelector('.top_btn').addEventListener('click', ()=>{
-			window.scrollTo({top: 0, behavior: 'smooth'});
-		})
+		const topBtn = document.querySelector('.top_btn');
+
+		window.addEventListener('scroll', () => { 
+			let scrollY = window.scrollY;
+			
+			if(400 <= scrollY) {
+				topBtn.style.display = "table";
+			}else{
+				topBtn.style.display = "none";
+			}
+		});
+
+		topBtn.addEventListener('click', ()=>{
+			window.scrollTo({top: 0});
+		});
 	}
 
 	// gnb
-	const $gnb = document.querySelectorAll('.gnb > li');
-	const $sub = document.getElementsByClassName('sub');
-	const $bg_box = document.getElementsByClassName('bg_box')
+	const gnb = document.querySelectorAll('.gnb > li');
+	const sub = document.getElementsByClassName('sub');
+	const bgBox = document.getElementsByClassName('bg_box');
 
 	function gnbSub(n){
 		for(let i=0; i<=3; i++){
-			$sub[i].style.display = "none";
+			sub[i].style.display = "none";
 		}
 
-		$sub[n].style.display = "block";
-		$bg_box[0].style.display = "block";
+		sub[n].style.display = "block";
+		bgBox[0].style.display = "block";
 	}
 
 	function gnbOut(){
 		for(let i=0; i<=3; i++){
-			$sub[i].style.display = "none";
+			sub[i].style.display = "none";
 		}
 		
-		$bg_box[0].style.display = "none";
+		bgBox[0].style.display = "none";
 	}
 
-	for(let n=0; n<$sub.length; n++){
-		$gnb[n].addEventListener('mouseenter', ()=>{gnbSub(n);})
-		$gnb[n].addEventListener('focusin', ()=>{gnbSub(n);}) // focus 동작 추가
+	for(let n=0; n<sub.length; n++){
+		gnb[n].addEventListener('mouseenter', ()=>{gnbSub(n);});
+		gnb[n].addEventListener('focusin', ()=>{gnbSub(n);}); // focus 동작 추가
 
-		$gnb[n].addEventListener('mouseleave', gnbOut);
-		$gnb[n].addEventListener('blur', gnbOut); // focusout(blur) 동작추가
+		gnb[n].addEventListener('mouseleave', gnbOut);
+		gnb[n].addEventListener('blur', gnbOut); // focusout(blur) 동작추가
 	}
+
+	//search
+	const search = document.querySelector('.search form');
+	const searchInput = document.querySelector('.search input');
+
+	function searchPrevent(event){
+		event.preventDefault();
+	}
+
+	search.addEventListener('submit', searchPrevent);
+
+	function searchFocus(){
+		searchInput.style.display = "inline";
+		searchInput.focus();
+	}
+	
+	search.addEventListener('click', ()=>{searchFocus()});
+	search.addEventListener('focusin', ()=>{searchFocus()});
+	
+	searchInput.addEventListener('blur', ()=>{
+		searchInput.style.display = "none";
+		searchInput.value = "";
+	});
 
 </script>
 </body>
