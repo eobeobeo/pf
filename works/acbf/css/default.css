@@ -322,12 +322,12 @@ h2 {
     text-align: center;
 }
 
-.celeb_contents article:hover,
-.celeb_contents article:focus {
+.celeb_contents .celeb_box:hover,
+.celeb_contents .celeb_box:focus {
     cursor: pointer;
 }
 
-.celeb_contents article {
+.celeb_contents .celeb_box {
     display: inline-block;
     width: 380px;
     height: 634px;
