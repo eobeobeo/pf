@@ -421,7 +421,7 @@ header {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 429px) {
     .profile_info {
         width: auto;
     }
@@ -575,7 +575,7 @@ header {
 
     /* short */
     #portfolio .short {
-        position: initial;
+        position: static;
         margin-bottom: 100px;
     }
 
@@ -599,7 +599,7 @@ header {
 
 @media screen and (max-width: 429px) {
     #portfolio .short {
-        margin-bottom: initial;
+        margin-bottom: auto;
     }
 }
 

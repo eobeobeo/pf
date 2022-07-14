@@ -1,6 +1,6 @@
 $(function () {
     //notice
-    $("#notice_icon").on("mouseenter focus", function (event) {
+    $("#notice_icon").on("mouseenter focus click", function (event) {
         event.preventDefault(); // 브라우저 기본동작 차단
 
         $("#notice").fadeIn();
