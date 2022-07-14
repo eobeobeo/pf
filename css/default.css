@@ -421,6 +421,18 @@ header {
     }
 }
 
+@media screen and (max-width: 400px) {
+    .profile_info {
+        width: auto;
+    }
+
+    .profile_info p {
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 /* portfolio(포트폴리오) */
 #portfolio {
     width: 100%;
